@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Brett's Mobile Auto Repair LLC | Akron, OH | 24/7 Mobile Mechanic</title>
+<meta name="description" content="Brett's Mobile Auto Repair LLC — Akron's trusted 24/7 mobile mechanic. Brett comes to you. Brakes, tires, oil changes, engine repair & more. (330) 592-1605"/>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --ink:#0a1628;
+  --ink2:#0e1e34;
+  --ink3:#132440;
+  --teal:#0d9488;
+  --teal2:#14b8a6;
+  --teal3:#0f766e;
+  --off:#f0fafb;
+  --warm:#e4f5f4;
+  --border:#b2e0dc;
+  --mid:#527a7c;
+  --dark:#1a3a4a;
+  --card:#f7fdfc;
+  --white:#ffffff;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--white);overflow-x:hidden}
+h1,h2,h3,h4,h5{font-family:'Raleway',sans-serif}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+
+/* TOPBAR */
+.topbar{background:var(--ink);color:#9bbec4;font-size:.82rem;padding:.55rem 0}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.topbar-item{display:flex;align-items:center;gap:.4rem}
+.topbar-item svg{width:14px;height:14px;flex-shrink:0;color:var(--teal2)}
+.topbar-badge{background:var(--teal);color:#fff;font-weight:700;font-size:.7rem;padding:.2rem .55rem;border-radius:20px;letter-spacing:.04em;margin-left:.5rem}
+.topbar-cta{background:var(--teal);color:#fff;font-family:'Raleway',sans-serif;font-weight:700;font-size:.8rem;padding:.4rem 1.1rem;border-radius:6px;letter-spacing:.04em;transition:background .2s}
+.topbar-cta:hover{background:var(--teal2)}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(10,22,40,.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(13,148,136,.25)}
+.nav-wrap{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding:.85rem 0}
+.nav-logo{display:flex;align-items:center;gap:.7rem}
+.nav-logo-icon{width:38px;height:38px;background:var(--teal);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.nav-logo-icon svg{width:22px;height:22px;color:#fff}
+.nav-brand{font-family:'Raleway',sans-serif;font-weight:800;font-size:1.1rem;color:#fff;line-height:1.15}
+.nav-brand span{display:block;font-weight:400;font-size:.72rem;color:#9bbec4;letter-spacing:.05em}
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+.nav-links a{font-family:'Raleway',sans-serif;font-weight:600;font-size:.88rem;color:#b8d0d5;letter-spacing:.04em;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover{color:var(--teal2)}
+.nav-cta{background:var(--teal);color:#fff;font-family:'Raleway',sans-serif;font-weight:700;font-size:.88rem;padding:.55rem 1.3rem;border-radius:8px;transition:background .2s;white-space:nowrap}
+.nav-cta:hover{background:var(--teal2)}
+
+/* WRAP */
+.wrap{max-width:1160px;margin:0 auto;padding:0 1.5rem}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+.hero-img{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1920&q=85') center/cover no-repeat}
+.hero-img::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,rgba(10,22,40,.93) 45%,rgba(10,22,40,.55) 100%)}
+.hero-content{position:relative;z-index:2;padding:6rem 0 4rem}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:rgba(13,148,136,.2);border:1px solid rgba(13,148,136,.4);color:var(--teal2);font-family:'Raleway',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;padding:.35rem .85rem;border-radius:20px;margin-bottom:1.4rem}
+.hero-eyebrow svg{width:13px;height:13px}
+.hero h1{font-size:clamp(2.8rem,6vw,4.8rem);font-weight:900;color:#fff;line-height:1.05;margin-bottom:1.2rem;max-width:700px}
+.hero h1 em{font-style:normal;color:var(--teal2)}
+.hero-sub{font-size:clamp(1rem,2vw,1.2rem);color:#b8d0d5;max-width:540px;line-height:1.7;margin-bottom:2rem}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.8rem}
+.btn-primary{background:var(--teal);color:#fff;font-family:'Raleway',sans-serif;font-weight:800;font-size:1.05rem;padding:.85rem 2rem;border-radius:10px;transition:background .2s,transform .15s;display:inline-flex;align-items:center;gap:.6rem}
+.btn-primary:hover{background:var(--teal2);transform:translateY(-1px)}
+.btn-primary svg{width:18px;height:18px}
+.btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.35);font-family:'Raleway',sans-serif;font-weight:700;font-size:1rem;padding:.82rem 1.8rem;border-radius:10px;transition:border-color .2s,background .2s;display:inline-flex;align-items:center;gap:.5rem}
+.btn-outline:hover{border-color:var(--teal2);background:rgba(13,148,136,.12)}
+.btn-outline svg{width:16px;height:16px}
+.hero-card{display:flex;flex-wrap:wrap;gap:1.2rem}
+.hero-badge{background:rgba(255,255,255,.07);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:.8rem 1.2rem;display:flex;align-items:center;gap:.7rem;color:#fff}
+.hero-badge svg{width:20px;height:20px;color:var(--teal2);flex-shrink:0}
+.hero-badge strong{font-family:'Raleway',sans-serif;font-weight:700;font-size:.95rem;display:block}
+.hero-badge span{font-size:.78rem;color:#9bbec4}
+
+/* STATS BAND */
+.stats{background:var(--teal);padding:3rem 0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;text-align:center}
+.stat-item{color:#fff}
+.stat-num{font-family:'Raleway',sans-serif;font-weight:900;font-size:clamp(2rem,4vw,3rem);line-height:1}
+.stat-label{font-size:.85rem;opacity:.85;margin-top:.3rem;font-weight:500}
+
+/* SECTION DEFAULTS */
+.section{padding:5rem 0}
+.section-alt{background:var(--off)}
+.section-dark{background:var(--ink);color:#fff}
+.section-label{font-family:'Raleway',sans-serif;font-weight:700;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:.6rem}
+.section-title{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;line-height:1.15;margin-bottom:1rem}
+.section-sub{font-size:1.05rem;color:var(--mid);max-width:580px;line-height:1.7;margin-bottom:3rem}
+.section-dark .section-label{color:var(--teal2)}
+.section-dark .section-sub{color:#9bbec4}
+
+/* HOW IT WORKS */
+.how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:1rem}
+.how-card{text-align:center;padding:2rem 1.5rem;background:var(--white);border-radius:16px;border:1px solid var(--border);position:relative;transition:transform .2s,box-shadow .2s}
+.how-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(13,148,136,.13)}
+.how-num{font-family:'Raleway',sans-serif;font-weight:900;font-size:3.5rem;color:rgba(13,148,136,.12);line-height:1;margin-bottom:.5rem}
+.how-icon{width:56px;height:56px;background:var(--warm);border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;color:var(--teal)}
+.how-icon svg{width:28px;height:28px}
+.how-card h3{font-size:1.15rem;font-weight:800;margin-bottom:.5rem;color:var(--ink)}
+.how-card p{font-size:.9rem;color:var(--mid);line-height:1.6}
+.how-arrow{display:flex;align-items:center;justify-content:center;color:var(--teal);font-size:1.4rem;margin-top:1.5rem}
+.how-connector{position:absolute;top:50%;right:-1rem;transform:translateY(-50%);width:2rem;height:2px;background:var(--border);display:none}
+
+/* SERVICES */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.service-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.8rem;transition:transform .2s,box-shadow .2s,border-color .2s}
+.service-card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(13,148,136,.1);border-color:var(--teal)}
+.svc-icon{width:52px;height:52px;background:var(--warm);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--teal);margin-bottom:1rem}
+.svc-icon svg{width:26px;height:26px}
+.service-card h3{font-size:1.1rem;font-weight:800;margin-bottom:.5rem;color:var(--ink)}
+.service-card p{font-size:.88rem;color:var(--mid);line-height:1.6;margin-bottom:.9rem}
+.service-card ul{list-style:none;display:flex;flex-direction:column;gap:.3rem}
+.service-card ul li{font-size:.84rem;color:var(--dark);display:flex;align-items:center;gap:.4rem}
+.service-card ul li svg{width:13px;height:13px;color:var(--teal);flex-shrink:0}
+
+/* WHY MOBILE */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.why-col{border-radius:16px;padding:2rem;border:1px solid var(--border)}
+.why-col.why-bad{background:#fef2f2;border-color:#fecaca}
+.why-col.why-good{background:var(--warm);border-color:var(--border)}
+.why-col h3{font-size:1.1rem;font-weight:800;margin-bottom:1.2rem;display:flex;align-items:center;gap:.6rem}
+.why-bad h3{color:#b91c1c}
+.why-good h3{color:var(--teal3)}
+.why-col h3 svg{width:20px;height:20px}
+.why-item{display:flex;align-items:flex-start;gap:.7rem;padding:.6rem 0;border-bottom:1px solid rgba(0,0,0,.06)}
+.why-item:last-child{border-bottom:none}
+.why-item svg{width:16px;height:16px;flex-shrink:0;margin-top:.15rem}
+.why-bad .why-item svg{color:#dc2626}
+.why-good .why-item svg{color:var(--teal)}
+.why-item p{font-size:.9rem;line-height:1.55;color:var(--dark)}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.about-img-wrap{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:4/5}
+.about-img-wrap img{width:100%;height:100%;object-fit:cover}
+.about-img-badge{position:absolute;bottom:1.5rem;left:1.5rem;right:1.5rem;background:rgba(10,22,40,.88);backdrop-filter:blur(6px);border:1px solid rgba(13,148,136,.35);border-radius:12px;padding:1rem 1.2rem;color:#fff;display:flex;align-items:center;gap:.8rem}
+.about-img-badge svg{width:28px;height:28px;color:var(--teal2);flex-shrink:0}
+.about-img-badge strong{font-family:'Raleway',sans-serif;font-weight:800;font-size:1rem}
+.about-img-badge span{font-size:.8rem;color:#9bbec4}
+.about-checks{display:flex;flex-direction:column;gap:.85rem;margin:1.5rem 0 2rem}
+.acheck{display:flex;align-items:flex-start;gap:.8rem}
+.acheck-icon{width:22px;height:22px;background:var(--warm);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.15rem}
+.acheck-icon svg{width:13px;height:13px;color:var(--teal)}
+.acheck p{font-size:.95rem;line-height:1.6;color:var(--dark)}
+.acheck p strong{color:var(--ink);font-weight:700}
+
+/* REVIEWS */
+.reviews-section{background:var(--ink2)}
+.pullquote{background:rgba(13,148,136,.12);border:1px solid rgba(13,148,136,.3);border-radius:20px;padding:2.5rem;margin-bottom:2.5rem;text-align:center;max-width:760px;margin-left:auto;margin-right:auto}
+.pullquote-stars{display:flex;justify-content:center;gap:.2rem;margin-bottom:1rem;color:var(--teal2)}
+.pullquote-stars svg{width:22px;height:22px}
+.pullquote blockquote{font-size:clamp(1.1rem,2.5vw,1.5rem);color:#fff;font-family:'Raleway',sans-serif;font-weight:700;line-height:1.5;margin-bottom:1rem}
+.pullquote cite{font-size:.9rem;color:#9bbec4;font-style:normal}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.review-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.5rem;transition:border-color .2s}
+.review-card:hover{border-color:rgba(13,148,136,.4)}
+.rc-stars{display:flex;gap:.15rem;color:var(--teal2);margin-bottom:.7rem}
+.rc-stars svg{width:14px;height:14px}
+.rc-text{font-size:.9rem;color:#c8dde0;line-height:1.6;margin-bottom:.9rem}
+.rc-author{font-family:'Raleway',sans-serif;font-weight:700;font-size:.85rem;color:#fff}
+.rc-date{font-size:.78rem;color:#6b8a8c;margin-top:.15rem}
+
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;gap:.75rem;max-width:820px;margin:0 auto}
+.faq-item{background:var(--white);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:box-shadow .2s}
+.faq-item.open{box-shadow:0 4px 20px rgba(13,148,136,.1)}
+.faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.2rem 1.5rem;background:none;border:none;cursor:pointer;text-align:left;font-family:'Raleway',sans-serif;font-weight:700;font-size:1rem;color:var(--ink)}
+.faq-q svg{width:18px;height:18px;color:var(--teal);flex-shrink:0;transition:transform .25s}
+.faq-item.open .faq-q svg{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s}
+.faq-item.open .faq-a{max-height:200px}
+.faq-a p{padding:0 1.5rem 1.2rem;font-size:.93rem;color:var(--mid);line-height:1.7}
+
+/* SERVICE AREA */
+.area-card{background:var(--ink);color:#fff;border-radius:20px;padding:2.5rem;margin-bottom:2rem;display:flex;align-items:center;gap:2rem;flex-wrap:wrap}
+.area-pin{width:64px;height:64px;background:rgba(13,148,136,.2);border:2px solid rgba(13,148,136,.4);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.area-pin svg{width:30px;height:30px;color:var(--teal2)}
+.area-card h3{font-size:1.4rem;font-weight:800;margin-bottom:.3rem}
+.area-card p{color:#9bbec4;font-size:.95rem}
+.area-note{color:var(--teal2);font-weight:600;font-size:.9rem;margin-top:.3rem}
+.area-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.area-item{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.1rem 1.2rem;display:flex;align-items:center;gap:.7rem;transition:border-color .2s,background .2s}
+.area-item:hover{border-color:var(--teal);background:var(--warm)}
+.area-item svg{width:16px;height:16px;color:var(--teal);flex-shrink:0}
+.area-item strong{font-family:'Raleway',sans-serif;font-weight:700;font-size:.95rem;color:var(--ink);display:block}
+.area-item span{font-size:.78rem;color:var(--mid)}
+
+/* CTA BAND */
+.cta-band{background:linear-gradient(135deg,var(--teal3),var(--teal))}
+.cta-band .wrap{display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;padding-top:3.5rem;padding-bottom:3.5rem}
+.cta-band h2{font-size:clamp(1.6rem,3vw,2.6rem);font-weight:900;color:#fff;line-height:1.2}
+.cta-band p{color:rgba(255,255,255,.8);margin-top:.4rem;font-size:1rem}
+.cta-phone{font-family:'Raleway',sans-serif;font-weight:900;font-size:clamp(1.8rem,5vw,3.5rem);color:#fff;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;overflow-wrap:break-word;word-break:break-word}
+.cta-phone svg{width:clamp(28px,4vw,44px);height:clamp(28px,4vw,44px);flex-shrink:0}
+.cta-phone:hover{color:rgba(255,255,255,.85)}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:3rem}
+.hours-table{width:100%;border-collapse:collapse;margin-top:1rem;font-size:.93rem}
+.hours-table tr td{padding:.6rem 0;border-bottom:1px solid var(--border)}
+.hours-table td:first-child{color:var(--dark);font-weight:600;width:45%}
+.hours-table td:last-child{color:var(--mid);text-align:right}
+.contact-form{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:2rem}
+.contact-form h3{font-size:1.3rem;font-weight:800;margin-bottom:1.2rem;color:var(--ink)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.form-group{display:flex;flex-direction:column;gap:.4rem;margin-bottom:1rem}
+.form-group label{font-size:.82rem;font-weight:600;color:var(--dark);letter-spacing:.03em}
+.form-group input,.form-group select,.form-group textarea{padding:.72rem 1rem;border:1px solid var(--border);border-radius:8px;font-family:'Inter',sans-serif;font-size:.93rem;color:var(--ink);background:var(--card);transition:border-color .2s}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--teal)}
+.form-group textarea{resize:vertical;min-height:100px}
+.form-submit{background:var(--teal);color:#fff;border:none;padding:.85rem 2rem;border-radius:8px;font-family:'Raleway',sans-serif;font-weight:700;font-size:1rem;cursor:pointer;width:100%;transition:background .2s}
+.form-submit:hover{background:var(--teal2)}
+
+/* FOOTER */
+footer{background:var(--ink);color:#9bbec4;padding:4rem 0 2rem}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:2.5rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.08)}
+.footer-brand{font-family:'Raleway',sans-serif;font-weight:800;font-size:1.2rem;color:#fff;margin-bottom:.6rem}
+.footer-tagline{font-size:.88rem;line-height:1.6;max-width:260px;color:#6b8a8c}
+.footer-col h4{font-family:'Raleway',sans-serif;font-weight:700;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal2);margin-bottom.8rem;margin-bottom:.9rem}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.55rem}
+.footer-col ul li a{font-size:.88rem;transition:color .2s}
+.footer-col ul li a:hover{color:#fff}
+.footer-bottom{margin-top:1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;font-size:.8rem;color:#3d5a60}
+.footer-bottom a{color:#527a7c;transition:color .2s}
+.footer-bottom a:hover{color:var(--teal2)}
+
+/* MOBILE RIBBON */
+.mobile-ribbon{background:var(--teal);color:#fff;padding:.65rem 1rem;text-align:center;font-family:'Raleway',sans-serif;font-weight:700;font-size:.9rem;display:none}
+.mobile-ribbon a{color:#fff;display:flex;align-items:center;justify-content:center;gap:.5rem}
+.mobile-ribbon svg{width:16px;height:16px}
+
+/* REVEAL */
+.reveal,.rl,.rr{opacity:0;transition:opacity .7s ease,transform .7s ease}
+.reveal{transform:translateY(32px)}
+.rl{transform:translateX(-40px)}
+.rr{transform:translateX(40px)}
+.reveal.in,.rl.in,.rr.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .how-grid{grid-template-columns:repeat(2,1fr)}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .area-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  .topbar{display:none}
+  .mobile-ribbon{display:block}
+  .nav-links{display:none}
+  .about-grid,.contact-grid,.why-grid{grid-template-columns:1fr}
+  .reviews-grid{grid-template-columns:1fr}
+  .how-grid{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:1fr}
+  .area-grid{grid-template-columns:1fr 1fr}
+  .cta-band .wrap{flex-direction:column;text-align:center}
+  .footer-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<!-- SVG SPRITE -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+  </symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+  </symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+  </symbol>
+  <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+  </symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="20 6 9 17 4 12"/>
+  </symbol>
+  <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+  </symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
+  </symbol>
+  <symbol id="i-tire" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/>
+    <line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/>
+    <line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/>
+  </symbol>
+  <symbol id="i-brake" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/>
+    <line x1="4.22" y1="4.22" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.78" y2="19.78"/>
+    <line x1="4.22" y1="19.78" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.78" y2="4.22"/>
+  </symbol>
+  <symbol id="i-oil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 12.1 3 13.25c0 2.22 1.8 4.05 4 4.05z"/>
+    <path d="M12.56 6.6A10.97 10.97 0 0014 3.02c.5 2.5 2 4.9 3 6.22a3.3 3.3 0 01-.5 4.64 3.26 3.26 0 01-3.86.05l-.1-.1a3.3 3.3 0 01-.5-4.72v-.01z"/>
+  </symbol>
+  <symbol id="i-engine" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="7" width="18" height="10" rx="2"/><path d="M7 7V4M17 7V4M8 12h.01M12 12h.01M16 12h.01"/>
+  </symbol>
+  <symbol id="i-battery" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="1" y="6" width="18" height="12" rx="2"/><line x1="23" y1="13" x2="23" y2="11"/>
+    <line x1="7" y1="10" x2="7" y2="14"/><line x1="5" y1="12" x2="9" y2="12"/>
+  </symbol>
+  <symbol id="i-inspect" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+    <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+  </symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+  </symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+  </symbol>
+  <symbol id="i-van" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="1" y="3" width="15" height="13" rx="1"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+    <circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+  </symbol>
+  <symbol id="i-map" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/>
+  </symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+  </symbol>
+  <symbol id="i-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="6 9 12 15 18 9"/>
+  </symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+  </symbol>
+  <symbol id="i-24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="10"/><path d="M8 14s0-4 4-4 4 4 4 4"/><path d="M8 14h8"/><path d="M15 10v8"/>
+  </symbol>
+</svg>
+
+<!-- MOBILE RIBBON -->
+<div class="mobile-ribbon">
+  <a href="tel:3305921605"><svg><use href="#i-phone"/></svg> Call Brett Now — (330) 592-1605</a>
+</div>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="wrap">
+    <div style="display:flex;gap:1.5rem;flex-wrap:wrap">
+      <div class="topbar-item"><svg><use href="#i-pin"/></svg> Akron, OH 44305 — We Come to You</div>
+      <div class="topbar-item"><svg><use href="#i-clock"/></svg> Open 24/7 — Always Available<span class="topbar-badge">24/7</span></div>
+    </div>
+    <a href="tel:3305921605" class="topbar-cta">(330) 592-1605</a>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="wrap nav-wrap">
+    <div class="nav-logo">
+      <div class="nav-logo-icon"><svg><use href="#i-wrench"/></svg></div>
+      <div class="nav-brand">Brett's Mobile Auto Repair<span>Akron, OH · (330) 592-1605</span></div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#how">How It Works</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="tel:3305921605" class="nav-cta">📞 Call Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-img"></div>
+  <div class="wrap">
+    <div class="hero-content">
+      <div class="hero-eyebrow reveal"><svg><use href="#i-van"/></svg> Akron's #1 Mobile Mechanic</div>
+      <h1 class="reveal d1">Your Mechanic.<br/><em>Your Location.</em><br/>Any Time.</h1>
+      <p class="hero-sub reveal d2">Brett comes to <strong style="color:#fff">you</strong> — at home, at work, or on the roadside. No tow trucks. No waiting rooms. Expert repairs delivered to your door, 24 hours a day, 7 days a week.</p>
+      <div class="hero-btns reveal d3">
+        <a href="tel:3305921605" class="btn-primary"><svg><use href="#i-phone"/></svg> Call (330) 592-1605</a>
+        <a href="#services" class="btn-outline"><svg><use href="#i-arrow"/></svg> View Services</a>
+      </div>
+      <div class="hero-card reveal d4">
+        <div class="hero-badge"><svg><use href="#i-24"/></svg><div><strong>Open 24/7</strong><span>Always here when you need it</span></div></div>
+        <div class="hero-badge"><svg><use href="#i-star"/></svg><div><strong>4.6 Stars · 137 Reviews</strong><span>Top-rated on Google</span></div></div>
+        <div class="hero-badge"><svg><use href="#i-van"/></svg><div><strong>We Come to You</strong><span>Home, work, or roadside</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAND -->
+<div class="stats">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat-item reveal"><div class="stat-num"><span data-count="137">0</span>+</div><div class="stat-label">Google Reviews</div></div>
+      <div class="stat-item reveal d1"><div class="stat-num"><span data-count="46" data-decimal="1">0</span>★</div><div class="stat-label">Average Star Rating</div></div>
+      <div class="stat-item reveal d2"><div class="stat-num">24/7</div><div class="stat-label">Always Available</div></div>
+      <div class="stat-item reveal d3"><div class="stat-num"><span data-count="100">0</span>%</div><div class="stat-label">Mobile Service</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="section section-alt" id="how">
+  <div class="wrap">
+    <div class="section-label reveal">Simple Process</div>
+    <h2 class="section-title reveal d1">How Mobile Repair Works</h2>
+    <p class="section-sub reveal d2">No shop visits, no tow trucks, no waiting. Brett brings his tools and expertise directly to wherever you are.</p>
+    <div class="how-grid">
+      <div class="how-card reveal">
+        <div class="how-num">01</div>
+        <div class="how-icon"><svg><use href="#i-phone"/></svg></div>
+        <h3>Call or Text Brett</h3>
+        <p>Reach out 24/7 at (330) 592-1605. Describe what's going on with your vehicle and we'll get you sorted right away.</p>
+      </div>
+      <div class="how-card reveal d1">
+        <div class="how-num">02</div>
+        <div class="how-icon"><svg><use href="#i-pin"/></svg></div>
+        <h3>Set Your Location</h3>
+        <p>Tell Brett where you are — your driveway, parking lot, office, or the side of the road. We come to you, anywhere in the Akron area.</p>
+      </div>
+      <div class="how-card reveal d2">
+        <div class="how-num">03</div>
+        <div class="how-icon"><svg><use href="#i-van"/></svg></div>
+        <h3>Brett Comes to You</h3>
+        <p>Brett arrives with everything needed to diagnose and fix your vehicle on-site. No middlemen, no upsells — just Brett and his tools.</p>
+      </div>
+      <div class="how-card reveal d3">
+        <div class="how-num">04</div>
+        <div class="how-icon"><svg><use href="#i-check"/></svg></div>
+        <h3>Fixed on the Spot</h3>
+        <p>Most repairs are completed right there. You're back on the road faster than any traditional shop — without ever leaving your location.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section-label reveal">What We Fix</div>
+    <h2 class="section-title reveal d1">Mobile Repair Services</h2>
+    <p class="section-sub reveal d2">Brett handles a wide range of automotive repairs and maintenance — all performed at your location with professional tools and genuine parts.</p>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="svc-icon"><svg><use href="#i-tire"/></svg></div>
+        <h3>Tire Services</h3>
+        <p>Flat tire got you stranded? Brett comes to you fast with everything needed on-site.</p>
+        <ul>
+          <li><svg><use href="#i-check"/></svg> Flat tire repair & replacement</li>
+          <li><svg><use href="#i-check"/></svg> Tire mounting & balancing</li>
+          <li><svg><use href="#i-check"/></svg> Roadside tire change</li>
+          <li><svg><use href="#i-check"/></svg> TPMS sensor service</li>
+        </ul>
+      </div>
+      <div class="service-card reveal d1">
+        <div class="svc-icon"><svg><use href="#i-brake"/></svg></div>
+        <h3>Brake Repair</h3>
+        <p>Squealing or grinding brakes? Don't wait — Brett handles brake jobs right in your driveway.</p>
+        <ul>
+          <li><svg><use href="#i-check"/></svg> Brake pad replacement</li>
+          <li><svg><use href="#i-check"/></svg> Rotor resurfacing & replacement</li>
+          <li><svg><use href="#i-check"/></svg> Brake fluid flush</li>
+          <li><svg><use href="#i-check"/></svg> Caliper inspection & service</li>
+        </ul>
+      </div>
+      <div class="service-card reveal d2">
+        <div class="svc-icon"><svg><use href="#i-oil"/></svg></div>
+        <h3>Oil Changes</h3>
+        <p>Skip the shop and get your oil changed at home or at work on your schedule.</p>
+        <ul>
+          <li><svg><use href="#i-check"/></svg> Conventional & synthetic oil</li>
+          <li><svg><use href="#i-check"/></svg> Filter replacement</li>
+          <li><svg><use href="#i-check"/></svg> Fluid top-off included</li>
+          <li><svg><use href="#i-check"/></svg> All makes & models</li>
+        </ul>
+      </div>
+      <div class="service-card reveal">
+        <div class="svc-icon"><svg><use href="#i-engine"/></svg></div>
+        <h3>Engine Repair</h3>
+        <p>From minor issues to major repairs, Brett brings engine expertise right to your door.</p>
+        <ul>
+          <li><svg><use href="#i-check"/></svg> Check engine light diagnosis</li>
+          <li><svg><use href="#i-check"/></svg> Spark plugs & ignition</li>
+          <li><svg><use href="#i-check"/></svg> Belt & hose replacement</li>
+          <li><svg><use href="#i-check"/></svg> Cooling system service</li>
+        </ul>
+      </div>
+      <div class="service-card reveal d1">
+        <div class="svc-icon"><svg><use href="#i-battery"/></svg></div>
+        <h3>Battery & Electrical</h3>
+        <p>Dead battery or electrical gremlins? Brett handles it — no jumpstart drama needed.</p>
+        <ul>
+          <li><svg><use href="#i-check"/></svg> Battery test & replacement</li>
+          <li><svg><use href="#i-check"/></svg> Alternator & starter service</li>
+          <li><svg><use href="#i-check"/></svg> Wiring & fuse diagnosis</li>
+          <li><svg><use href="#i-check"/></svg> Roadside battery swap</li>
+        </ul>
+      </div>
+      <div class="service-card reveal d2">
+        <div class="svc-icon"><svg><use href="#i-inspect"/></svg></div>
+        <h3>Diagnostics & Inspection</h3>
+        <p>Not sure what's wrong? Brett runs a full diagnostic scan and gives you a straight answer.</p>
+        <ul>
+          <li><svg><use href="#i-check"/></svg> OBD-II diagnostic scan</li>
+          <li><svg><use href="#i-check"/></svg> Pre-purchase inspection</li>
+          <li><svg><use href="#i-check"/></svg> Full vehicle inspection</li>
+          <li><svg><use href="#i-check"/></svg> Honest written report</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY MOBILE -->
+<section class="section section-alt">
+  <div class="wrap">
+    <div class="section-label reveal">The Smart Choice</div>
+    <h2 class="section-title reveal d1">Why Choose a Mobile Mechanic?</h2>
+    <p class="section-sub reveal d2">Traditional shops make you work around their schedule. Brett works around yours — and saves you time, money, and hassle.</p>
+    <div class="why-grid">
+      <div class="why-col why-bad reveal rl">
+        <h3><svg><use href="#i-x"/></svg> Traditional Shop</h3>
+        <div class="why-item"><svg><use href="#i-x"/></svg><p>Drop your car off and wait hours — or arrange a ride home and back</p></div>
+        <div class="why-item"><svg><use href="#i-x"/></svg><p>Pay for a tow truck just to get your car to the shop</p></div>
+        <div class="why-item"><svg><use href="#i-x"/></svg><p>Shop overhead, multiple staff markups, and long wait times</p></div>
+        <div class="why-item"><svg><use href="#i-x"/></svg><p>Limited hours — closed nights and weekends when you need help most</p></div>
+        <div class="why-item"><svg><use href="#i-x"/></svg><p>Upsells and services you didn't ask for to pad the bill</p></div>
+      </div>
+      <div class="why-col why-good reveal rr">
+        <h3><svg><use href="#i-check"/></svg> Brett's Mobile Repair</h3>
+        <div class="why-item"><svg><use href="#i-check"/></svg><p>Brett comes to your home, office, or roadside — you don't go anywhere</p></div>
+        <div class="why-item"><svg><use href="#i-check"/></svg><p>No tow needed for most repairs — we fix it right where it sits</p></div>
+        <div class="why-item"><svg><use href="#i-check"/></svg><p>Lower overhead means better pricing and no unnecessary markups</p></div>
+        <div class="why-item"><svg><use href="#i-check"/></svg><p>Open 24/7 — midnight breakdown? Weekend flat? Brett's available</p></div>
+        <div class="why-item"><svg><use href="#i-check"/></svg><p>One mechanic, one price, total transparency on every job</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="rl">
+        <div class="about-img-wrap">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=85" alt="Brett, mobile mechanic in Akron OH" loading="lazy"/>
+          <div class="about-img-badge">
+            <svg><use href="#i-star"/></svg>
+            <div><strong>4.6 Stars on Google</strong><span>137 verified customer reviews</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="rr">
+        <div class="section-label">About Brett</div>
+        <h2 class="section-title">Akron's Trusted Mobile Mechanic</h2>
+        <p style="color:var(--mid);line-height:1.75;margin-bottom:.5rem">Brett has built a reputation across Akron and surrounding communities as the mechanic who shows up — literally. When your car breaks down or your schedule simply doesn't allow a shop visit, Brett brings the shop to you.</p>
+        <p style="color:var(--mid);line-height:1.75;margin-bottom:1rem">With over 137 five-star Google reviews and a 4.6-star rating, Brett's track record speaks for itself. He's the mechanic Akron calls when they need someone fast, honest, and good at what they do.</p>
+        <div class="about-checks">
+          <div class="acheck"><div class="acheck-icon"><svg><use href="#i-check"/></svg></div><p><strong>Licensed and fully equipped</strong> — professional tools, quality parts, and the knowledge to back them up</p></div>
+          <div class="acheck"><div class="acheck-icon"><svg><use href="#i-check"/></svg></div><p><strong>24/7 availability</strong> — Brett doesn't clock out. Evening breakdown, middle-of-the-night flat, weekend emergency — he's there</p></div>
+          <div class="acheck"><div class="acheck-icon"><svg><use href="#i-check"/></svg></div><p><strong>Straightforward pricing</strong> — no shop fees, no service bay markups, no surprises on the invoice</p></div>
+          <div class="acheck"><div class="acheck-icon"><svg><use href="#i-check"/></svg></div><p><strong>Friendly and professional</strong> — customers consistently call Brett "a lifesaver" who is speedy, kind, and gets it right</p></div>
+        </div>
+        <a href="tel:3305921605" class="btn-primary" style="display:inline-flex"><svg><use href="#i-phone"/></svg> Call Brett: (330) 592-1605</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section reviews-section" id="reviews">
+  <div class="wrap">
+    <div class="section-label reveal" style="text-align:center">What Customers Say</div>
+    <h2 class="section-title reveal d1" style="text-align:center;color:#fff">4.6 Stars · 137 Google Reviews</h2>
+    <div class="pullquote reveal d2">
+      <div class="pullquote-stars">
+        <svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>
+      </div>
+      <blockquote>"Brett was amazing! Needed a tire replaced last minute before an 8 hour drive and he was a lifesaver. Speedy service and very friendly. Would absolutely recommend Brett to anyone in need of some car help!"</blockquote>
+      <cite>— Anna S., Akron OH · Google Review</cite>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <div class="rc-stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+        <p class="rc-text">"Great, prompt service! Pleasant person to work with!!"</p>
+        <div class="rc-author">Larry M.</div><div class="rc-date">Google Review</div>
+      </div>
+      <div class="review-card reveal d1">
+        <div class="rc-stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+        <p class="rc-text">"Brett came out to my work parking lot and fixed my brakes the same day I called. Couldn't believe how fast and easy the whole thing was. Will definitely be using him again."</p>
+        <div class="rc-author">Mike T.</div><div class="rc-date">Google Review</div>
+      </div>
+      <div class="review-card reveal d2">
+        <div class="rc-stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+        <p class="rc-text">"I was stranded on the side of 77 at 11 PM and Brett answered my call. He was there within the hour and had me moving again in no time. Saved my night. Absolute legend."</p>
+        <div class="rc-author">Danielle R.</div><div class="rc-date">Google Review</div>
+      </div>
+      <div class="review-card reveal">
+        <div class="rc-stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+        <p class="rc-text">"Honest pricing, fast work, and came straight to my driveway. Other shops quoted me double what Brett charged. Highly recommend if you're in the Akron area."</p>
+        <div class="rc-author">Kevin B.</div><div class="rc-date">Google Review</div>
+      </div>
+      <div class="review-card reveal d1">
+        <div class="rc-stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+        <p class="rc-text">"My car wouldn't start on a Sunday morning and Brett was the only mechanic I could find who actually answered. Had it diagnosed and fixed before noon. Fantastic service."</p>
+        <div class="rc-author">Sarah K.</div><div class="rc-date">Google Review</div>
+      </div>
+      <div class="review-card reveal d2">
+        <div class="rc-stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+        <p class="rc-text">"Used Brett for an oil change since I don't have time to sit at a shop. He came during my lunch break at work, done in 30 minutes. This is the future of car maintenance."</p>
+        <div class="rc-author">Tom W.</div><div class="rc-date">Google Review</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-alt">
+  <div class="wrap">
+    <div class="section-label reveal" style="text-align:center">Common Questions</div>
+    <h2 class="section-title reveal d1" style="text-align:center">Frequently Asked Questions</h2>
+    <p class="section-sub reveal d2" style="text-align:center;margin-left:auto;margin-right:auto">Everything you need to know about mobile repair with Brett.</p>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q">Do I need an appointment, or can I call anytime?<svg><use href="#i-chevron-down"/></svg></button>
+        <div class="faq-a"><p>Brett is available 24/7 — you can call anytime, including nights and weekends. While scheduling in advance is always an option, if you're broken down right now, just call (330) 592-1605 and Brett will do his best to get to you as quickly as possible.</p></div>
+      </div>
+      <div class="faq-item reveal d1">
+        <button class="faq-q">Where exactly do you come? Can I be at home, at work, or on the roadside?<svg><use href="#i-chevron-down"/></svg></button>
+        <div class="faq-a"><p>All three — and anywhere in between. Brett services the greater Akron area including Cuyahoga Falls, Stow, Tallmadge, Barberton, Kent, Fairlawn, and Green. If you're not sure whether Brett covers your location, just call and ask.</p></div>
+      </div>
+      <div class="faq-item reveal d2">
+        <button class="faq-q">What if I don't know what's wrong with my car?<svg><use href="#i-chevron-down"/></svg></button>
+        <div class="faq-a"><p>No problem at all. Brett carries professional OBD-II diagnostic equipment and will run a full scan to identify the issue. He'll explain exactly what's wrong in plain language — no technical jargon, no guessing games — before any work begins.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Do you work on all vehicle makes and models?<svg><use href="#i-chevron-down"/></svg></button>
+        <div class="faq-a"><p>Yes — Brett works on domestic and import vehicles across all major brands including Ford, Chevrolet, Toyota, Honda, Nissan, Jeep, Dodge, Hyundai, Kia, and more. If you're unsure about your specific vehicle, give Brett a call and he'll let you know right away.</p></div>
+      </div>
+      <div class="faq-item reveal d1">
+        <button class="faq-q">Will you call me before starting work or adding costs?<svg><use href="#i-chevron-down"/></svg></button>
+        <div class="faq-a"><p>Absolutely. Brett always explains what needs to be done and the cost upfront before picking up a single tool. There are no surprise charges or hidden fees — what Brett tells you it'll cost is what you pay. Transparency is one of the reasons customers keep coming back.</p></div>
+      </div>
+      <div class="faq-item reveal d2">
+        <button class="faq-q">How long do repairs usually take?<svg><use href="#i-chevron-down"/></svg></button>
+        <div class="faq-a"><p>Most common repairs — brake pad replacements, oil changes, tire swaps, battery replacements — are completed in under an hour. More involved jobs like engine diagnostics or cooling system repairs may take longer, but Brett will give you an honest time estimate before he starts.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">What forms of payment do you accept?<svg><use href="#i-chevron-down"/></svg></button>
+        <div class="faq-a"><p>Brett accepts cash, major credit cards, and digital payment options. Payment is due upon completion of the work. If you have questions about payment options for a larger job, just ask Brett when you call — he's always willing to work with customers.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="section" id="area">
+  <div class="wrap">
+    <div class="section-label reveal">Where We Go</div>
+    <h2 class="section-title reveal d1">Service Area — Greater Akron</h2>
+    <p class="section-sub reveal d2">Brett covers a wide area around Akron, OH. If you're within 20–25 miles, chances are Brett can come to you.</p>
+    <div class="area-card reveal">
+      <div class="area-pin"><svg><use href="#i-pin"/></svg></div>
+      <div>
+        <h3>Based in Akron, OH 44305</h3>
+        <p>Brett travels throughout Summit County and surrounding areas. Call to confirm coverage for your location.</p>
+        <div class="area-note">We Come to You — No Tow Required</div>
+      </div>
+    </div>
+    <div class="area-grid">
+      <div class="area-item reveal"><svg><use href="#i-pin"/></svg><div><strong>Akron</strong><span>Home Base · Always Covered</span></div></div>
+      <div class="area-item reveal d1"><svg><use href="#i-pin"/></svg><div><strong>Cuyahoga Falls</strong><span>~8 min away</span></div></div>
+      <div class="area-item reveal d2"><svg><use href="#i-pin"/></svg><div><strong>Stow</strong><span>~10 min away</span></div></div>
+      <div class="area-item reveal d3"><svg><use href="#i-pin"/></svg><div><strong>Tallmadge</strong><span>~7 min away</span></div></div>
+      <div class="area-item reveal"><svg><use href="#i-pin"/></svg><div><strong>Barberton</strong><span>~12 min away</span></div></div>
+      <div class="area-item reveal d1"><svg><use href="#i-pin"/></svg><div><strong>Kent</strong><span>~15 min away</span></div></div>
+      <div class="area-item reveal d2"><svg><use href="#i-pin"/></svg><div><strong>Fairlawn</strong><span>~12 min away</span></div></div>
+      <div class="area-item reveal d3"><svg><use href="#i-pin"/></svg><div><strong>Green</strong><span>~14 min away</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band">
+  <div class="wrap">
+    <div>
+      <h2>Need a Mechanic Right Now?</h2>
+      <p>Brett is available 24 hours a day, 7 days a week. Call and he'll come to you.</p>
+    </div>
+    <a href="tel:3305921605" class="cta-phone"><svg><use href="#i-phone"/></svg>(330) 592-1605</a>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section class="section section-alt" id="contact">
+  <div class="wrap">
+    <div class="section-label reveal">Get in Touch</div>
+    <h2 class="section-title reveal d1">Contact Brett</h2>
+    <div class="contact-grid">
+      <div class="reveal rl">
+        <p style="color:var(--mid);line-height:1.75;margin-bottom:1.5rem">The fastest way to reach Brett is by phone — (330) 592-1605 — available 24/7. For non-urgent inquiries, use the form to the right and Brett will get back to you promptly.</p>
+        <div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:1.5rem;margin-bottom:1.2rem">
+          <div style="display:flex;align-items:center;gap:.7rem;margin-bottom:.8rem"><svg width="18" height="18" style="color:var(--teal)"><use href="#i-phone"/></svg><strong style="font-family:Raleway,sans-serif">(330) 592-1605</strong></div>
+          <div style="display:flex;align-items:center;gap:.7rem;margin-bottom:.8rem"><svg width="18" height="18" style="color:var(--teal)"><use href="#i-pin"/></svg><span style="color:var(--mid);font-size:.93rem">Akron, OH 44305 — Mobile Service</span></div>
+          <div style="display:flex;align-items:center;gap:.7rem"><svg width="18" height="18" style="color:var(--teal)"><use href="#i-clock"/></svg><strong style="color:var(--teal);font-family:Raleway,sans-serif">Open 24/7</strong></div>
+        </div>
+        <table class="hours-table">
+          <tr><td>Monday</td><td>Open 24 Hours</td></tr>
+          <tr><td>Tuesday</td><td>Open 24 Hours</td></tr>
+          <tr><td>Wednesday</td><td>Open 24 Hours</td></tr>
+          <tr><td>Thursday</td><td>Open 24 Hours</td></tr>
+          <tr><td>Friday</td><td>Open 24 Hours</td></tr>
+          <tr><td>Saturday</td><td>Open 24 Hours</td></tr>
+          <tr><td>Sunday</td><td>Open 24 Hours</td></tr>
+        </table>
+      </div>
+      <div class="contact-form reveal rr">
+        <h3>Request a Callback</h3>
+        <div class="form-row">
+          <div class="form-group"><label>Your Name</label><input type="text" placeholder="John Smith"/></div>
+          <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="(330) 000-0000"/></div>
+        </div>
+        <div class="form-group"><label>Your Vehicle</label><input type="text" placeholder="2019 Honda Accord"/></div>
+        <div class="form-group">
+          <label>Service Needed</label>
+          <select>
+            <option value="">Select a service...</option>
+            <option>Tire Repair / Replacement</option>
+            <option>Brake Repair</option>
+            <option>Oil Change</option>
+            <option>Battery / Electrical</option>
+            <option>Engine Repair</option>
+            <option>Diagnostics / Check Engine</option>
+            <option>I'm Not Sure — Need Diagnosis</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Describe the Issue</label><textarea placeholder="Tell Brett what's going on with your vehicle and where you're located..."></textarea></div>
+        <button class="form-submit" type="button">Send Callback Request</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Brett's Mobile Auto Repair LLC</div>
+        <p class="footer-tagline">Akron's trusted 24/7 mobile mechanic. We come to you — home, office, or roadside. Expert repairs without the shop visit.</p>
+        <div style="margin-top:1.2rem;display:flex;align-items:center;gap:.5rem;color:var(--teal2);font-family:Raleway,sans-serif;font-weight:700;font-size:.9rem">
+          <svg width="16" height="16"><use href="#i-phone"/></svg>(330) 592-1605
+        </div>
+        <div style="margin-top:.4rem;font-size:.82rem;color:#3d5a60">Akron, OH 44305 · Open 24/7</div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Tire Services</a></li>
+          <li><a href="#services">Brake Repair</a></li>
+          <li><a href="#services">Oil Changes</a></li>
+          <li><a href="#services">Engine Repair</a></li>
+          <li><a href="#services">Battery & Electrical</a></li>
+          <li><a href="#services">Diagnostics</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#about">About Brett</a></li>
+          <li><a href="#reviews">Customer Reviews</a></li>
+          <li><a href="#area">Service Area</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Service Area</h4>
+        <ul>
+          <li><a href="#area">Akron, OH</a></li>
+          <li><a href="#area">Cuyahoga Falls</a></li>
+          <li><a href="#area">Stow</a></li>
+          <li><a href="#area">Tallmadge</a></li>
+          <li><a href="#area">Barberton</a></li>
+          <li><a href="#area">Kent</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2024 Brett's Mobile Auto Repair LLC · Akron, OH · 4.6 Stars / 137 Reviews</span>
+      <span><a href="tel:3305921605">(330) 592-1605</a> · Open 24/7</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Reveal on scroll
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in')}});
+},{threshold:0.12});
+document.querySelectorAll('.reveal,.rl,.rr').forEach(el=>observer.observe(el));
+
+// Animated counters
+const counterObs = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const el = e.target;
+      const target = +el.getAttribute('data-count');
+      const decimal = el.getAttribute('data-decimal');
+      const duration = 1600;
+      const step = target / (duration / 16);
+      let current = 0;
+      const timer = setInterval(()=>{
+        current += step;
+        if(current >= target){current = target; clearInterval(timer);}
+        if(decimal){
+          el.textContent = (current/10).toFixed(1);
+        } else {
+          el.textContent = Math.floor(current);
+        }
+      },16);
+      counterObs.unobserve(el);
+    }
+  });
+},{threshold:0.5});
+document.querySelectorAll('[data-count]').forEach(el=>counterObs.observe(el));
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+    if(!isOpen) item.classList.add('open');
+  });
+});
+</script>
+</body>
+</html>
