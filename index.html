@@ -57,9 +57,10 @@ nav{position:sticky;top:0;z-index:100;background:rgba(10,22,40,.97);backdrop-fil
 
 /* HERO */
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+.hero>.wrap{width:100%;position:relative;z-index:2}
 .hero-img{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1920&q=85') center/cover no-repeat}
 .hero-img::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,rgba(10,22,40,.93) 45%,rgba(10,22,40,.55) 100%)}
-.hero-content{position:relative;z-index:2;padding:6rem 0 4rem}
+.hero-content{padding:6rem 0 4rem}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:rgba(13,148,136,.2);border:1px solid rgba(13,148,136,.4);color:var(--teal2);font-family:'Raleway',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;padding:.35rem .85rem;border-radius:20px;margin-bottom:1.4rem}
 .hero-eyebrow svg{width:13px;height:13px}
 .hero h1{font-size:clamp(2.8rem,6vw,4.8rem);font-weight:900;color:#fff;line-height:1.05;margin-bottom:1.2rem;max-width:700px}
